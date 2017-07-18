@@ -21,16 +21,11 @@ Movie.prototype.calculatePrice = function(ageGroup){
 }
 
 
-
-
-
-
-
-
 //UI Logic
 $(document).ready(function(){
   $("form").submit(function(event){
-    debugger;
+  debugger;
+  event.preventDefault();
   var movieName = $("#movieName").val();
   var movieDate = $("#movieDate").val();
   var movieTime = $("input:radio[name=time]:checked").val();
@@ -38,9 +33,12 @@ $(document).ready(function(){
 
   var movieObj = new Movie(movieName,movieDate,movieTime);
   var price = movieObj.calculatePrice(ageGroup);
-  console.log(price);
 
-
+  $("#movieTitle").text(movieObj.movieName);
+  $("#movieCalander").text(movieObj.movieDate);
+  console.log(movieObj.movieDate);
+  $("#movieTime").text(movieObj.movieTime);
+  $("#moviePrice").text(price);
 
   });
 });
