@@ -55,7 +55,10 @@
                 <input type="radio" name="age" value=">50"> > 50
               </div>
             </div>
-
+            <div class="form-group">
+              <label for="numberOfTickets">Number of Tickets</label>
+              <input type="text" id="numberOfTickets">
+            </div>
             <div class="form-group">
               <button class="btn btn-success" type="submit">Get me Ticket</button>
             </div>
@@ -64,16 +67,28 @@
         <div class="col-md-4">
           <div id = "ticketOutput" class="form-group">
             <h2>Here is your ticket for today</h2>
-            <h3>Movie Title: <span id="movieTitle"></span></h3>
-            <h3>Date: <span id="movieCalander"></span></h3>
-            <h3>Time: <span id="movieTime"></span></h3>
-            <h3>Price:<span id="moviePrice"></span></h3>
-
-
-
+            <h5>Movie Title: <span id="movieTitle"></span></h5>
+            <h5>Date: <span id="movieCalander"></span></h5>
+            <h5>Time: <span id="movieTime"></span></h5>
+            <h5 id="moviePrice">Price: </h5>
+            <h5 id="numberOfTickets">Number of tickets: </h5>
+            <h2 id="grandTotal">Grand total:</h2>
 
           </div>
         </div>
+      </div>
+      <div id="images" class="form-group">
+        <img src="img/gameOfThrones.jpeg">
+        <img src="img/starWars.jpeg">
+        <img src="img/theGuardian.jpeg">
+        <img src="img/titanic.jpeg">
+        <img src="img/gameOfThrones.jpeg">
+        <img src="img/starWars.jpeg">
+        <img src="img/theGuardian.jpeg">
+        <img src="img/titanic.jpeg">
+        <img src="img/gameOfThrones.jpeg">
+        <img src="img/starWars.jpeg">
+
       </div>
     </div>
   </body>

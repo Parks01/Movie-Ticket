@@ -30,15 +30,19 @@ $(document).ready(function(){
   var movieDate = $("#movieDate").val();
   var movieTime = $("input:radio[name=time]:checked").val();
   var ageGroup = $("input:radio[name=age]:checked").val();
+  var numberOfTickets = parseInt($("#numberOfTickets").val());
 
   var movieObj = new Movie(movieName,movieDate,movieTime);
   var price = movieObj.calculatePrice(ageGroup);
+  var grandTotal = numberOfTickets * price;
 
   $("#movieTitle").text(movieObj.movieName);
   $("#movieCalander").text(movieObj.movieDate);
   console.log(movieObj.movieDate);
   $("#movieTime").text(movieObj.movieTime);
-  $("#moviePrice").text(price);
-
+  $("#moviePrice").append('<span>' + '$' + price + '.00' + '</span>')
+  $("#numberOfTickets").text(numberOfTickets);
+  $("#grandTotal").append('<span>' + '$' + grandTotal + '.00' + '</span>');
+   $("#ticketOutput").show()
   });
 });
