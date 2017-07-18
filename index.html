@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Movie Tickets</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <form id="movieTicket">
+            <div class="form-group">
+              <label for="movieName">Movie Name:</label>
+              <select id="movieName">
+                <option value="wonderWoman">Wonder Woman</option>
+                <option value="spiderMan">Spider Man</option>
+                <option value="gameOfThrone">Game of Throne</option>
+                <option value="guardianOfTheGalaxy">Guardins of the Galaxy</option>
+                <option value="starWars">Star Wars</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="date">Movie Date</label>
+              <input type="date" id="movieDate">
+            </div>
+            <div class="form-group">
+              <label for="time">Movie Time</label>
+              <div class="from-control">
+                <input type="radio" name="time" value="evening"> Evening
+              </div>
+              <div class="from-control">
+                <input type="radio" name="time" value="matinee"> Matinee
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="Age">Age</label>
+              <div class="form-group">
+                <input type="radio" name="age" value="<18"> < 18
+              </div>
+              <div class="form-group">
+                <input type="radio" name="age" value="18-50"> 18 - 50
+              </div>
+              <div class="form-group">
+                <input type="radio" name="age" value=">50"> > 50
+              </div>
+            </div>
+
+            <div class="form-group">
+              <button class="btn btn-success" type="submit">Get me Ticket</button>
+            </div>
+          </from>
+        </div>
+        <div class="col-md-4">
+          <h2>Here is your ticket for today</h2>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
